@@ -27,3 +27,5 @@ class Contact {
         console.log("My name is " + this.firstName + " " + this.lastName + " and my phone number is" + this.phone + ".");
     }
 }
+
+let jed = new Contact("Jed", "Walker", "123-456-7890");
