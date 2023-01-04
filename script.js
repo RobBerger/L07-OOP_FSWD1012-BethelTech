@@ -6,3 +6,12 @@ const car = {
         console.log("starting the car")
     }
 }
+
+const car2 = {
+    make: "Ferrari",
+    model: "812",
+    color: "Rosso Fuoco",
+    start: function() {
+        console.log("starting the car")
+    }
+}
