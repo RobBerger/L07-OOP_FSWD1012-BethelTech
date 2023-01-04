@@ -16,3 +16,8 @@
 //     }
 // }
 
+class Contact {
+    constructor(first, last, phone) {
+     
+    }
+}
