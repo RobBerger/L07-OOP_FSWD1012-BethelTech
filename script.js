@@ -18,6 +18,8 @@
 
 class Contact {
     constructor(first, last, phone) {
-     
+        this.firstName = first;
+        this.lastName = last; 
+        this.phone = phone;
     }
 }
