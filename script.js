@@ -89,30 +89,64 @@
 // let aClass = new Course("A Class", "Mon 1:00pm", 200);
 // aClass.changeClassTime("Mon 3:00pm");
 
+// class Course {
+//     constructor(name, timeOfClass, pointsAvailable) {
+//         this.name = name;
+//         this.timeOfClass = timeOfClass;
+//         this.pointsAvailable = pointsAvailable
+//     }
+
+//     classTime() {
+//         alert("Class will begin " + this.timeOfClass);
+//     }
+
+//     changeClassTime(time) {
+//         this.timeOfClass = time;
+//         alert("Can we change class time to " + this.timeOfClass);
+//     }
+
+//     get time() {
+//         return "Class will now be " + this.timeOfClass;
+//     }
+// }
+
+// let aClass = new Course("A Class", "Mon 1:00pm", 200);
+// aClass.classTime()
+// aClass.changeClassTime("Mon 3:00pm");
+
+// // invoke the getter
+// alert(aClass.time);
+
 class Course {
     constructor(name, timeOfClass, pointsAvailable) {
         this.name = name;
         this.timeOfClass = timeOfClass;
         this.pointsAvailable = pointsAvailable
     }
-
-    classTime() {
-        alert("Class will begin " + this.timeOfClass);
-    }
-
     changeClassTime(time) {
         this.timeOfClass = time;
-        alert("Can we change class time to " + this.timeOfClass);
+        alert("Class time has been changed to " + this.timeOfClass);
     }
 
     get time() {
-        return "Class will now be " + this.timeOfClass;
+        return this.timeOfClass;
+    }
+
+    set points(value) {
+        if (value > this.pointsAvailable) {
+            this.pointsAvailable = value;
+            alert("Points available have increased to " + this.pointsAvailable + " points");
+        } else {
+            alert("Points available value can only increase");
+            throw Error("Points available value can only increase");
+        }
     }
 }
 
 let aClass = new Course("A Class", "Mon 1:00pm", 200);
-aClass.classTime()
-aClass.changeClassTime("Mon 3:00pm");
 
-// invoke the getter
-alert(aClass.time);
+// ERROR: Points available value can only increase
+// aClass.points = 150;
+
+// All-Good!
+aClass.points = 250;
