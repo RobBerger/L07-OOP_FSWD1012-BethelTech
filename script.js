@@ -67,4 +67,24 @@ let myCar = new Vehicle("gray", 4, 0.5, 4);
 // call class methods using dot notation
 myCar.go();
 myCar.status();
-myCar.message(); 
+myCar.message();
+
+class Course {
+    constructor(name, timeOfClass, pointsAvailable) {
+        this.name = name;
+        this.timeOfClass = timeOfClass;
+        this.pointsAvailable = pointsAvailable
+    }
+
+    classTime() {
+        alert("Class will begin " + this.timeOfClass);
+    }
+
+    changeClassTime(time) {
+        this.timeOfClass = time;
+        alert("Class time has been changed to " + this.timeOfClass);
+    }
+}
+
+let aClass = new Course("A Class", "Mon 1:00pm", 200);
+aClass.changeClassTime("Mon 3:00pm");
