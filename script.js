@@ -22,4 +22,8 @@ class Contact {
         this.lastName = last; 
         this.phone = phone;
     }
+
+    info() {
+        console.log("My name is " + this.firstName + " " + this.lastName + " and my phone number is" + this.phone + ".");
+    }
 }
