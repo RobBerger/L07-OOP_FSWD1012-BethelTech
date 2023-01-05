@@ -182,5 +182,7 @@ class Vehicle {
 }
 
 class Motorcycle extends Vehicle {
-
+    constructor(color, fuelLvl) {
+        super(color, 2, fuelLvl, 0);
+    }
 }
