@@ -117,39 +117,39 @@
 // // invoke the getter
 // alert(aClass.time);
 
-class Course {
-    constructor(name, timeOfClass, pointsAvailable) {
-        this.name = name;
-        this.timeOfClass = timeOfClass;
-        this.pointsAvailable = pointsAvailable
-    }
-    changeClassTime(time) {
-        this.timeOfClass = time;
-        alert("Class time has been changed to " + this.timeOfClass);
-    }
+// class Course {
+//     constructor(name, timeOfClass, pointsAvailable) {
+//         this.name = name;
+//         this.timeOfClass = timeOfClass;
+//         this.pointsAvailable = pointsAvailable
+//     }
+//     changeClassTime(time) {
+//         this.timeOfClass = time;
+//         alert("Class time has been changed to " + this.timeOfClass);
+//     }
 
-    get time() {
-        return this.timeOfClass;
-    }
+//     get time() {
+//         return this.timeOfClass;
+//     }
 
-    set points(value) {
-        if (value > this.pointsAvailable) {
-            this.pointsAvailable = value;
-            alert("Points available have increased to " + this.pointsAvailable + " points");
-        } else {
-            alert("Points available value can only increase");
-            throw Error("Points available value can only increase");
-        }
-    }
-}
+//     set points(value) {
+//         if (value > this.pointsAvailable) {
+//             this.pointsAvailable = value;
+//             alert("Points available have increased to " + this.pointsAvailable + " points");
+//         } else {
+//             alert("Points available value can only increase");
+//             throw Error("Points available value can only increase");
+//         }
+//     }
+// }
 
-let aClass = new Course("A Class", "Mon 1:00pm", 200);
+// let aClass = new Course("A Class", "Mon 1:00pm", 200);
 
 // ERROR: Points available value can only increase
 // aClass.points = 150;
 
 // All-Good!
-aClass.points = 250;
+// aClass.points = 250;
 
 class Vehicle {
     constructor(clr, numWheels, fuelLevel, numDoors) {
@@ -179,4 +179,8 @@ class Vehicle {
     message() {
         console.log("My vehicle is a " + this.color + " " + this.doors + " door SUV with " + this.numOfWheels + " wheels and a fuel level of " + this.fuelLvl + " of a tank.")
     }
+}
+
+class Motorcycle extends Vehicle {
+
 }
