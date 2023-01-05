@@ -150,3 +150,33 @@ let aClass = new Course("A Class", "Mon 1:00pm", 200);
 
 // All-Good!
 aClass.points = 250;
+
+class Vehicle {
+    constructor(clr, numWheels, fuelLevel, numDoors) {
+        this.color = clr;
+        this.numOfWheels = numWheels;
+        this.fuelLvl = fuelLevel;
+        this.doors = numDoors;
+        this.state = "stopped";
+    }
+
+    go() {
+        this.state = "moving";
+    }
+
+    stop() {
+        this.state = "stopped";
+    }
+
+    status() {
+        if (this.state === "moving") {
+            alert("Here we go!");
+        } else {
+            alert("Did you start the Vehicle?");
+        }
+    }
+
+    message() {
+        console.log("My vehicle is a " + this.color + " " + this.doors + " door SUV with " + this.numOfWheels + " wheels and a fuel level of " + this.fuelLvl + " of a tank.")
+    }
+}
