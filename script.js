@@ -184,5 +184,18 @@ class Vehicle {
 class Motorcycle extends Vehicle {
     constructor(color, fuelLvl) {
         super(color, 2, fuelLvl, 0);
+        
+        //define a new property that is not inherited from the parent class
+        this.make = make;
+        
+    }
+    turnHandleBars() {
+        alert("Turning the handlebars of my " + this.color + " motorcycle.");
     }
 }
+
+
+let moto = new Motorcycle("red", 0.5, "Honda"); moto.go() moto.turnHandleBars();
+moto.go()
+moto.turnHandleBars();
+
